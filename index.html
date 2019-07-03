@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+
+<script>
+    var user = JSON.parse('{{ user | tojson | safe}}');
+    document.getElementById('username').innerHTML = user.firstname + " " +
+            user.lastname;
+</script>
+    <title></title>
+  </head>
+  <body>
+    <p>Hello, <span id="username"></span></p>
+  </body>
+</html>
